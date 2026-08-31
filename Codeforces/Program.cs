@@ -1,1 +1,1 @@
-﻿Codeforces._71A_Way_Too_Long_Words.Program.Main();
+﻿Codeforces._1A_Theatre_Square.Program.Main();
