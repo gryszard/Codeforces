@@ -1,1 +1,1 @@
-﻿Codeforces._1A_Theatre_Square.Program.Main();
+﻿Codeforces._1371A_Magical_Sticks.Program.Main();
