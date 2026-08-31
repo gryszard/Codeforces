@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Codeforces.Tests/Codeforces.Tests.csproj" />
+  <Project Path="Codeforces/Codeforces.csproj" />
+</Solution>

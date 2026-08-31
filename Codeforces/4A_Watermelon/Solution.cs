@@ -1,0 +1,54 @@
+﻿namespace Codeforces._4A_Watermelon;
+
+public static class Program
+{
+    public static void Main()
+    {
+        var solution = new Solution(Console.In, Console.Out);
+        solution.Run();
+    }
+}
+
+public class Solution
+{
+    private readonly TextReader _textReader;
+    private readonly TextWriter _textWriter;
+
+    public Solution()
+    {
+        _textReader = Console.In;
+        _textWriter = Console.Out;
+    }
+
+    public Solution(TextReader textReader, TextWriter textWriter)
+    {
+        _textReader = textReader;
+        _textWriter = textWriter;
+    }
+
+    public void Run()
+    {
+        string? nextLine = _textReader.ReadLine();
+
+        if (!int.TryParse(nextLine, out var weight))
+        {
+            _textWriter.WriteLine("ERROR");
+            return;
+        }
+
+        if (weight < 1 || weight > 100)
+        {
+            _textWriter.WriteLine("ERROR");
+            return;
+        }
+
+        if (weight == 2 || weight % 2 == 1)
+        {
+            _textWriter.WriteLine("NO");
+        }
+        else
+        {
+            _textWriter.WriteLine("YES");
+        }
+    }
+}
