@@ -1,1 +1,1 @@
-﻿Codeforces._4A_Watermelon.Program.Main();
+﻿Codeforces._71A_Way_Too_Long_Words.Program.Main();
