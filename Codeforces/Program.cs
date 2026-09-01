@@ -1,1 +1,1 @@
-﻿Codeforces._1093.A_Dice_Rolling.Program.Main();
+﻿Codeforces._1720.C_Corners.Program.Main();
