@@ -1,1 +1,1 @@
-﻿Codeforces._0352.B_Jeff_and_Periods.Program.Main();
+﻿Codeforces._1093.A_Dice_Rolling.Program.Main();
