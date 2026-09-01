@@ -1,4 +1,4 @@
-﻿namespace Codeforces._1371A_Magical_Sticks;
+﻿namespace Codeforces._0071.A_Way_Too_Long_Words;
 
 public static class Program
 {
@@ -30,28 +30,35 @@ public class Solution
     {
         string? nextLine = _textReader.ReadLine();
 
-        if (!int.TryParse(nextLine, out var testCases))
+        if (!int.TryParse(nextLine, out var linesCount))
         {
             _textWriter.WriteLine("ERROR");
             return;
         }
 
-        for (int i = 0; i < testCases; i++)
-        {
-            SingleTest();
-        }
-    }
-
-    private void SingleTest()
-    {
-        string? nextLine = _textReader.ReadLine();
-
-        if (!int.TryParse(nextLine, out var n))
+        if (linesCount < 1 || linesCount > 100)
         {
             _textWriter.WriteLine("ERROR");
             return;
         }
 
-        _textWriter.WriteLine($"{(n + 1) / 2}");
+        for (int i = 0; i < linesCount; i++)
+        {
+            nextLine = _textReader.ReadLine();
+
+            if (nextLine is null || nextLine.Length < 1 || nextLine.Length > 100)
+            {
+                _textWriter.WriteLine("ERROR");
+                return;
+            }
+
+            if (nextLine.Length <= 10)
+            {
+                _textWriter.WriteLine(nextLine);
+                continue;
+            }
+
+            _textWriter.WriteLine($"{nextLine.First()}{nextLine.Length - 2}{nextLine.Last()}");
+        }
     }
 }

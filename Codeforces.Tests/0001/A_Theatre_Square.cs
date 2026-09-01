@@ -1,6 +1,6 @@
-﻿namespace Codeforces.Tests._1A_Theatre_Square;
+﻿namespace Codeforces.Tests._0001;
 
-internal class Tests
+internal class A_Theatre_Square
 {
     [Test, TestCaseSource(nameof(TestCases))]
     public void RunTest(string input, string expectedOutput)
@@ -8,7 +8,7 @@ internal class Tests
         using var @in = new StringReader(input);
         using var @out = new StringWriter();
 
-        var solution = new Codeforces._1A_Theatre_Square.Solution(@in, @out);
+        var solution = new Codeforces._0001.A_Theatre_Square.Solution(@in, @out);
         solution.Run();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));

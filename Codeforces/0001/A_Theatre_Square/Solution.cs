@@ -1,4 +1,4 @@
-﻿namespace Codeforces._1A_Theatre_Square;
+﻿namespace Codeforces._0001.A_Theatre_Square;
 
 public static class Program
 {

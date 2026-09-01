@@ -1,4 +1,4 @@
-﻿namespace Codeforces._71A_Way_Too_Long_Words;
+﻿namespace Codeforces._0004.A_Watermelon;
 
 public static class Program
 {
@@ -30,35 +30,25 @@ public class Solution
     {
         string? nextLine = _textReader.ReadLine();
 
-        if (!int.TryParse(nextLine, out var linesCount))
+        if (!int.TryParse(nextLine, out var weight))
         {
             _textWriter.WriteLine("ERROR");
             return;
         }
 
-        if (linesCount < 1 || linesCount > 100)
+        if (weight < 1 || weight > 100)
         {
             _textWriter.WriteLine("ERROR");
             return;
         }
 
-        for (int i = 0; i < linesCount; i++)
+        if (weight == 2 || weight % 2 == 1)
         {
-            nextLine = _textReader.ReadLine();
-
-            if (nextLine is null || nextLine.Length < 1 || nextLine.Length > 100)
-            {
-                _textWriter.WriteLine("ERROR");
-                return;
-            }
-
-            if (nextLine.Length <= 10)
-            {
-                _textWriter.WriteLine(nextLine);
-                continue;
-            }
-
-            _textWriter.WriteLine($"{nextLine.First()}{nextLine.Length - 2}{nextLine.Last()}");
+            _textWriter.WriteLine("NO");
+        }
+        else
+        {
+            _textWriter.WriteLine("YES");
         }
     }
 }

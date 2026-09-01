@@ -1,6 +1,6 @@
-﻿namespace Codeforces.Tests._1371.C_A_Cookie_for_You;
+﻿namespace Codeforces.Tests._1371;
 
-internal class Tests
+internal class C_A_Cookie_for_You
 {
     [Test, TestCaseSource(nameof(TestCases))]
     public void RunTest(string input, string expectedOutput)

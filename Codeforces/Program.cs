@@ -1,1 +1,1 @@
-﻿Codeforces._1371A_Magical_Sticks.Program.Main();
+﻿Codeforces._1371.A_Magical_Sticks.Program.Main();

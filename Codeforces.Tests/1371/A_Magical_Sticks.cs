@@ -1,6 +1,6 @@
-﻿namespace Codeforces.Tests._1371A_Magical_Sticks;
+﻿namespace Codeforces.Tests._1371;
 
-internal class Tests
+internal class A_Magical_Sticks
 {
     [Test, TestCaseSource(nameof(TestCases))]
     public void RunTest(string input, string expectedOutput)
@@ -8,7 +8,7 @@ internal class Tests
         using var @in = new StringReader(input);
         using var @out = new StringWriter();
 
-        var solution = new Codeforces._1371A_Magical_Sticks.Solution(@in, @out);
+        var solution = new Codeforces._1371.A_Magical_Sticks.Solution(@in, @out);
         solution.Run();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));

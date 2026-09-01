@@ -1,4 +1,4 @@
-﻿namespace Codeforces.Template;
+﻿namespace Codeforces._1371.A_Magical_Sticks;
 
 public static class Program
 {
@@ -30,12 +30,28 @@ public class Solution
     {
         string? nextLine = _textReader.ReadLine();
 
-        if (!int.TryParse(nextLine, out var _))
+        if (!int.TryParse(nextLine, out var testCases))
         {
             _textWriter.WriteLine("ERROR");
             return;
         }
 
-        // TODO: Implement the rest of the logic.
+        for (int i = 0; i < testCases; i++)
+        {
+            SingleTest();
+        }
+    }
+
+    private void SingleTest()
+    {
+        string? nextLine = _textReader.ReadLine();
+
+        if (!int.TryParse(nextLine, out var n))
+        {
+            _textWriter.WriteLine("ERROR");
+            return;
+        }
+
+        _textWriter.WriteLine($"{(n + 1) / 2}");
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace Codeforces.Tests._4A_Watermelon;
+﻿namespace Codeforces.Tests._0004;
 
-internal class Tests
+internal class A_Watermelon
 {
     [Test, TestCaseSource(nameof(TestCases))]
     public void RunTest(string input, string expectedOutput)
@@ -8,7 +8,7 @@ internal class Tests
         using var @in = new StringReader(input);
         using var @out = new StringWriter();
 
-        var solution = new Codeforces._4A_Watermelon.Solution(@in, @out);
+        var solution = new Codeforces._0004.A_Watermelon.Solution(@in, @out);
         solution.Run();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));

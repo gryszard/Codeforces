@@ -1,6 +1,6 @@
-﻿namespace Codeforces.Tests.Template;
+﻿namespace Codeforces.Tests.TMPL;
 
-internal class Tests
+internal class Template
 {
     [Test, TestCaseSource(nameof(TestCases))]
     public void RunTest(string input, string expectedOutput)
@@ -8,7 +8,7 @@ internal class Tests
         using var @in = new StringReader(input);
         using var @out = new StringWriter();
 
-        var solution = new Codeforces.Template.Solution(@in, @out);
+        var solution = new Codeforces.TMPL.Template.Solution(@in, @out);
         solution.Run();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));
@@ -16,6 +16,6 @@ internal class Tests
 
     private static IEnumerable<TestCaseData> TestCases()
     {
-        yield return new TestCaseData("", "\r\n");
+        yield return new TestCaseData("input", "ERROR\r\n");
     }
 }

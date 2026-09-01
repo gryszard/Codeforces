@@ -1,4 +1,4 @@
-﻿namespace Codeforces._4A_Watermelon;
+﻿namespace Codeforces.TMPL.Template;
 
 public static class Program
 {
@@ -30,25 +30,12 @@ public class Solution
     {
         string? nextLine = _textReader.ReadLine();
 
-        if (!int.TryParse(nextLine, out var weight))
+        if (!int.TryParse(nextLine, out var _))
         {
             _textWriter.WriteLine("ERROR");
             return;
         }
 
-        if (weight < 1 || weight > 100)
-        {
-            _textWriter.WriteLine("ERROR");
-            return;
-        }
-
-        if (weight == 2 || weight % 2 == 1)
-        {
-            _textWriter.WriteLine("NO");
-        }
-        else
-        {
-            _textWriter.WriteLine("YES");
-        }
+        // TODO: Implement the rest of the logic.
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace Codeforces.Tests._71A_Way_Too_Long_Words;
+﻿namespace Codeforces.Tests._0071;
 
-internal class Tests
+internal class A_Way_Too_Long_Words
 {
     [Test, TestCaseSource(nameof(TestCases))]
     public void RunTest(string input, string expectedOutput)
@@ -8,7 +8,7 @@ internal class Tests
         using var @in = new StringReader(input);
         using var @out = new StringWriter();
 
-        var solution = new Codeforces._71A_Way_Too_Long_Words.Solution(@in, @out);
+        var solution = new Codeforces._0071.A_Way_Too_Long_Words.Solution(@in, @out);
         solution.Run();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));
