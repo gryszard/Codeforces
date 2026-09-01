@@ -2,7 +2,7 @@
 
 internal class Template
 {
-    [Test, TestCaseSource(nameof(LoadLocalCases))]
+    [TestCaseSource(nameof(LoadLocalCases))]
     public void RunTest(string input, string expectedOutput)
     {
         using var @in = new StringReader(input);
