@@ -1,1 +1,1 @@
-﻿Codeforces._1253.A_Single_Push.Program.Main();
+﻿Codeforces._0352.B_Jeff_and_Periods.Program.Main();

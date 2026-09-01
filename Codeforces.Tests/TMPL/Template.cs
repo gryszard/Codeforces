@@ -16,6 +16,11 @@ internal class Template
 
     private static IEnumerable<TestCaseData> TestCases()
     {
-        yield return new TestCaseData("input", "ERROR\r\n");
+        yield return new TestCaseData("""
+            input
+            """, """
+            ERROR
+
+            """);
     }
 }
