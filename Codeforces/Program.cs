@@ -1,1 +1,2 @@
-﻿Codeforces._1720.C_Corners.Program.Main();
+﻿Codeforces._1257.C_Dominated_Subarray.Program.Main();
+

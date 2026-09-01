@@ -1,32 +1,22 @@
-﻿namespace Codeforces.Tests.TMPL;
+﻿namespace Codeforces.Tests._1257;
 
-internal class Template
+public class C_Dominated_Subarray
 {
-    [Test, TestCaseSource(nameof(LoadLocalCases))]
+    [TestCaseSource(nameof(LoadCases))]
     public void RunTest(string input, string expectedOutput)
     {
         using var @in = new StringReader(input);
         using var @out = new StringWriter();
 
-        var solution = new Codeforces.TMPL.Template.Solution(@in, @out);
+        var solution = new Codeforces._1257.C_Dominated_Subarray.Solution(@in, @out);
         solution.Run();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));
     }
 
-    private static IEnumerable<TestCaseData> LoadLocalCases()
+    private static IEnumerable<TestCaseData> LoadCases()
     {
-        yield return new TestCaseData("""
-            input
-            """, """
-            ERROR
-
-            """);
-    }
-
-    private static IEnumerable<TestCaseData> LoadExternalCases()
-    {
-        var inputFilesDirectory = Path.Combine(TestContext.CurrentContext.TestDirectory, "TMPL", "InputFiles");
+        var inputFilesDirectory = Path.Combine(TestContext.CurrentContext.TestDirectory, "1257", "InputFiles");
 
         foreach (var file in Directory.GetFiles(inputFilesDirectory, "input*.txt"))
         {
