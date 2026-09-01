@@ -1,1 +1,1 @@
-﻿Codeforces._1133.A_Middle_of_the_Contest.Program.Main();
+﻿Codeforces._1253.A_Single_Push.Program.Main();
