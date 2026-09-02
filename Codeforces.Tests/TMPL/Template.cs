@@ -1,4 +1,6 @@
-﻿namespace Codeforces.Tests.TMPL;
+﻿using Codeforces.Tests.Utilities;
+
+namespace Codeforces.Tests.TMPL;
 
 internal class Template
 {
@@ -26,19 +28,6 @@ internal class Template
 
     private static IEnumerable<TestCaseData> LoadExternalCases()
     {
-        var inputFilesDirectory = Path.Combine(TestContext.CurrentContext.TestDirectory, "TMPL", "InputFiles");
-
-        foreach (var file in Directory.GetFiles(inputFilesDirectory, "input*.txt"))
-        {
-            Console.WriteLine(file);
-
-            var expectedFile = file.Replace("input", "expected");
-
-            var input = File.ReadAllText(file);
-            var expectedOutput = File.ReadAllText(expectedFile);
-
-            yield return new TestCaseData(input, expectedOutput)
-                .SetArgDisplayNames(Path.GetFileNameWithoutExtension(file));
-        }
+        return Utils.LoadExternalTestCases("TMPL", "Template");
     }
 }

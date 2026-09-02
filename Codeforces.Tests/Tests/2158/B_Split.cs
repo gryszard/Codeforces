@@ -1,0 +1,23 @@
+﻿using Codeforces.Tests.Utilities;
+
+namespace Codeforces.Tests._2158;
+
+internal class B_Split
+{
+    [TestCaseSource(nameof(LoadExternalCases))]
+    public void RunTest(string input, string expectedOutput)
+    {
+        using var @in = new StringReader(input);
+        using var @out = new StringWriter();
+
+        var solution = new Codeforces._2158.B_Split.Solution(@in, @out);
+        solution.Run();
+
+        Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));
+    }
+
+    private static IEnumerable<TestCaseData> LoadExternalCases()
+    {
+        return Utils.LoadExternalTestCases("2158", "B_Split");
+    }
+}
