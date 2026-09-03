@@ -11,7 +11,7 @@ internal class Template
         using var @out = new StringWriter();
 
         var solution = new Codeforces.TMPL.Template.Solution(@in, @out);
-        solution.Run();
+        solution.RunSolution();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));
     }

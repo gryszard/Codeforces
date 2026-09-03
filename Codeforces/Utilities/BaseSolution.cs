@@ -1,9 +1,11 @@
 ﻿namespace Codeforces.Utilities;
 
-public class BaseSolution(TextReader textReader, TextWriter textWriter)
+public abstract class BaseSolution(TextReader textReader, TextWriter textWriter)
 {
     protected readonly TextReader _textReader = textReader;
     protected readonly TextWriter _textWriter = textWriter;
+
+    public abstract void RunSolution();
 
     protected void RunTests(Action singleTest)
     {

@@ -4,7 +4,7 @@ namespace Codeforces._1883.D_In_Love;
 
 public class Solution(TextReader textReader, TextWriter textWriter) : BaseSolution(textReader, textWriter)
 {
-    public void Run()
+    public override void RunSolution()
     {
         SingleTest();
     }

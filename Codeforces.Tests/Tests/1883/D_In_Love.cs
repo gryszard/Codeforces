@@ -11,7 +11,7 @@ internal class D_In_Love
         using var @out = new StringWriter();
 
         var solution = new Codeforces._1883.D_In_Love.Solution(@in, @out);
-        solution.Run();
+        solution.RunSolution();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));
     }

@@ -4,7 +4,7 @@ namespace Codeforces.TMPL.Template;
 
 public class Solution(TextReader textReader, TextWriter textWriter) : BaseSolution(textReader, textWriter)
 {
-    public void Run()
+    public override void RunSolution()
     {
         RunTests(SingleTest);
     }
