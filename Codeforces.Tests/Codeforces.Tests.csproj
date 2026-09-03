@@ -25,10 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="InputFiles\*\*\expected_*.txt">
+    <None Include="InputFiles\*\*\expected_*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="InputFiles\*\*\input_*.txt">
+    <None Include="InputFiles\*\*\input_*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

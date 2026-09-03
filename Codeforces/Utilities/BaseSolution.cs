@@ -34,4 +34,18 @@ public class BaseSolution(TextReader textReader, TextWriter textWriter)
 
         return [.. tokens.Select(int.Parse)];
     }
+
+    protected List<string> FetchStringTokens(int tokensExpected)
+    {
+        string? nextLine = _textReader.ReadLine();
+        ArgumentException.ThrowIfNullOrWhiteSpace(nextLine);
+
+        var tokens = nextLine.Split(' ');
+        if (tokens is null || tokens.Length != tokensExpected)
+        {
+            throw new ArgumentException($"Incorrect input tokens. Expecting {tokensExpected} tokens separated by single space.");
+        }
+
+        return [.. tokens];
+    }
 }
