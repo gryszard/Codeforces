@@ -1,6 +1,6 @@
 ﻿using Codeforces.Utilities;
 
-namespace Codeforces.TMPL.Template;
+namespace Codeforces.TMPL;
 
 public class Solution(TextReader textReader, TextWriter textWriter) : BaseSolution(textReader, textWriter)
 {

@@ -1,4 +1,4 @@
-﻿namespace Codeforces.TMPL.Template;
+﻿namespace Codeforces.TMPL;
 
 public static class Program
 {
