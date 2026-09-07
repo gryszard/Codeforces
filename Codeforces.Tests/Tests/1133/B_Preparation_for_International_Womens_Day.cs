@@ -1,72 +1,81 @@
 ﻿namespace Codeforces.Tests._1133;
 
-internal class A_Middle_of_the_Contest
+internal class B_Preparation_for_International_Womens_Day
 {
-    [Test, TestCaseSource(nameof(TestCases))]
+    [TestCaseSource(nameof(LoadLocalCases))]
     public void RunTest(string input, string expectedOutput)
     {
         using var @in = new StringReader(input);
         using var @out = new StringWriter();
 
-        var solution = new Codeforces._1133.A_Middle_of_the_Contest(@in, @out);
+        var solution = new Codeforces._1133.B_Preparation_for_International_Womens_Day(@in, @out);
         solution.RunSolution();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));
     }
 
-    private static IEnumerable<TestCaseData> TestCases()
+    private static IEnumerable<TestCaseData> LoadLocalCases()
     {
         yield return new TestCaseData("""
-            10:00
-            11:00
+            7 2
+            1 2 2 3 2 4 10
             
             """, """
-            10:30
+            6
 
             """);
 
         yield return new TestCaseData("""
-            11:10
-            11:12
+            8 2
+            1 2 2 3 2 4 6 10
             
             """, """
-            11:11
+            8
 
             """);
 
         yield return new TestCaseData("""
-            01:02
-            03:02
+            7 3
+            1 2 2 3 2 4 5
             
             """, """
-            02:02
+            4
 
             """);
 
         yield return new TestCaseData("""
-            00:00
-            23:58
+            5 5
+            5 20 1000 999999990 999999995
             
             """, """
-            11:59
+            4
 
             """);
 
         yield return new TestCaseData("""
-            00:00
-            00:02
+            5 5
+            1 6 11 16 19
             
             """, """
-            00:01
+            2
 
             """);
 
         yield return new TestCaseData("""
-            09:59
-            10:03
+            5 5
+            2 8 13 18 23
             
             """, """
-            10:01
+            2
+
+            """);
+
+        yield return new TestCaseData("""
+            6 5
+            2 7 3 13 23 27
+            
+            """, """
+            6
 
             """);
     }

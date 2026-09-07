@@ -1,4 +1,6 @@
-﻿namespace Codeforces.TMPL;
+﻿using Codeforces.TMPL;
+
+namespace Codeforces.Utilities;
 
 public static class Program
 {

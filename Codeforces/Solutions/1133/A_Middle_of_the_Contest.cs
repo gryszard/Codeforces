@@ -1,32 +1,15 @@
-﻿namespace Codeforces._1133.A_Middle_of_the_Contest;
+﻿using Codeforces.Utilities;
 
-public static class Program
+namespace Codeforces._1133;
+
+public class A_Middle_of_the_Contest(TextReader textReader, TextWriter textWriter) : BaseSolution(textReader, textWriter)
 {
-    public static void Main()
+    public override void RunSolution()
     {
-        var solution = new Solution(Console.In, Console.Out);
-        solution.Run();
-    }
-}
-
-public class Solution
-{
-    private readonly TextReader _textReader;
-    private readonly TextWriter _textWriter;
-
-    public Solution()
-    {
-        _textReader = Console.In;
-        _textWriter = Console.Out;
+        SingleTest();
     }
 
-    public Solution(TextReader textReader, TextWriter textWriter)
-    {
-        _textReader = textReader;
-        _textWriter = textWriter;
-    }
-
-    public void Run()
+    private void SingleTest()
     {
         string? nextLine = _textReader.ReadLine();
 
