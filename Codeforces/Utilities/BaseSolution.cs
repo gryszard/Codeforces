@@ -23,6 +23,39 @@ public abstract class BaseSolution(TextReader textReader, TextWriter textWriter)
         }
     }
 
+    protected int FetchSingleInt()
+    {
+        string? nextLine = _textReader.ReadLine();
+        ArgumentException.ThrowIfNullOrWhiteSpace(nextLine);
+
+        if (!int.TryParse(nextLine, out var value))
+        {
+            throw new ArgumentException("Cannot parse to int");
+        }
+
+        return value;
+    }
+
+    protected (int, int) FetchTwoInts()
+    {
+        string? nextLine = _textReader.ReadLine();
+        ArgumentException.ThrowIfNullOrWhiteSpace(nextLine);
+
+        var tokens = nextLine.Split(' ');
+        if (tokens is null || tokens.Length != 2)
+        {
+            throw new ArgumentException($"Incorrect input tokens. Expecting 2 ints separated by single space.");
+        }
+
+        if (!int.TryParse(tokens[0], out var value1) ||
+            !int.TryParse(tokens[1], out var value2))
+        {
+            throw new ArgumentException("Cannot parse to int");
+        }
+
+        return (value1, value2);
+    }
+
     protected List<int> FetchTokens(int tokensExpected)
     {
         string? nextLine = _textReader.ReadLine();

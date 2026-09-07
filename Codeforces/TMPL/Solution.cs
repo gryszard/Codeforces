@@ -11,13 +11,7 @@ public class Solution(TextReader textReader, TextWriter textWriter) : BaseSoluti
 
     private void SingleTest()
     {
-        string? nextLine = _textReader.ReadLine();
-
-        if (!int.TryParse(nextLine, out var _))
-        {
-            _textWriter.WriteLine("ERROR");
-            return;
-        }
+        var _ = FetchSingleInt();
 
         // TODO: Implement the rest of the logic.
     }
