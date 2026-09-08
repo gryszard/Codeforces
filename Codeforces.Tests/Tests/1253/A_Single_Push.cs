@@ -8,8 +8,8 @@ internal class A_Single_Push
         using var @in = new StringReader(input);
         using var @out = new StringWriter();
 
-        var solution = new Codeforces._1253.A_Single_Push.Solution(@in, @out);
-        solution.Run();
+        var solution = new Codeforces._1253.A_Single_Push(@in, @out);
+        solution.RunSolution();
 
         Assert.That(@out.ToString(), Is.EqualTo(expectedOutput));
     }

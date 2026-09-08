@@ -1,7 +1,7 @@
 ﻿using Codeforces.Utilities;
-using Codeforces._2189;
+using Codeforces._1253;
 
-var solution = new C1_XOR_Convenience(Console.In, Console.Out);
+var solution = new B_Silly_Mistake(Console.In, Console.Out);
 solution.RunSolution();
 
 //static BaseSolution solutionFactory(TextReader reader, TextWriter writer) => new Solution(reader, writer);
