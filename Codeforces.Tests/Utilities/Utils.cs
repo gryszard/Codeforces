@@ -26,4 +26,9 @@ internal class Utils
                 .SetArgDisplayNames(inputRawFileName);
         }
     }
+
+    internal static TestCaseData OneLinerTest(string input, string expectedOutput)
+    {
+        return new TestCaseData(input, expectedOutput + Environment.NewLine);
+    }
 }

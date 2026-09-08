@@ -56,6 +56,27 @@ public abstract class BaseSolution(TextReader textReader, TextWriter textWriter)
         return (value1, value2);
     }
 
+    protected (int, int, int) FetchThreeInts()
+    {
+        string? nextLine = _textReader.ReadLine();
+        ArgumentException.ThrowIfNullOrWhiteSpace(nextLine);
+
+        var tokens = nextLine.Split(' ');
+        if (tokens is null || tokens.Length != 3)
+        {
+            throw new ArgumentException($"Incorrect input tokens. Expecting 3 ints separated by single space.");
+        }
+
+        if (!int.TryParse(tokens[0], out var value1) ||
+            !int.TryParse(tokens[1], out var value2) ||
+            !int.TryParse(tokens[2], out var value3))
+        {
+            throw new ArgumentException("Cannot parse to int");
+        }
+
+        return (value1, value2, value3);
+    }
+
     protected List<int> FetchTokens(int tokensExpected)
     {
         string? nextLine = _textReader.ReadLine();
