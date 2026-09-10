@@ -1,7 +1,7 @@
 ﻿using Codeforces.Utilities;
-using Codeforces._0056;
+using Codeforces._0123;
 
-var solution = new C_Corporation_Mail(Console.In, Console.Out);
+var solution = new B_Squares(Console.In, Console.Out);
 solution.RunSolution();
 
 //static BaseSolution solutionFactory(TextReader reader, TextWriter writer) => new Solution(reader, writer);
