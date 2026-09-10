@@ -23,6 +23,14 @@ public abstract class BaseSolution(TextReader textReader, TextWriter textWriter)
         }
     }
 
+    protected string FetchLine()
+    {
+        string? nextLine = _textReader.ReadLine();
+        ArgumentException.ThrowIfNullOrWhiteSpace(nextLine);
+
+        return nextLine;
+    }
+
     protected int FetchSingleInt()
     {
         string? nextLine = _textReader.ReadLine();
